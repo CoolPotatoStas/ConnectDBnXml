@@ -2,6 +2,7 @@ package xmlAdapter.entity;
 
 import xmlAdapter.dictionary.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,9 +10,9 @@ public class Group {
     String title;
     Direction direction;
     Course course;
-    List<Student> students;
+    ArrayList<Student> students;
 
-    public Group(String title, Direction direction, Course course, List<Student> students) {
+    public Group(String title, Direction direction, Course course, ArrayList<Student> students) {
         this.title = title;
         this.direction = direction;
         this.course = course;
@@ -33,7 +34,7 @@ public class Group {
         return course;
     }
 
-    public List<Student> getStudents() {
+    public ArrayList<Student> getStudents() {
         return students;
     }
 
@@ -49,7 +50,7 @@ public class Group {
         this.course = course;
     }
 
-    public void setStudents(List<Student> students) {
+    public void setStudents(ArrayList<Student> students) {
         this.students = students;
     }
 

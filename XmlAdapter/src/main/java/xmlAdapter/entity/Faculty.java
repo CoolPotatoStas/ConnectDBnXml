@@ -1,17 +1,17 @@
 package xmlAdapter.entity;
 
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Faculty {
 
     String title;
-    List<Group> progEng;
-    List<Group> cyberSec;
-    List<Group> mathSec;
+    ArrayList<Group> progEng;
+    ArrayList<Group> cyberSec;
+    ArrayList<Group> mathSec;
 
 
-    public Faculty(String title, List<Group> progEng, List<Group> cyberSec, List<Group> mathSec) {
+    public Faculty(String title, ArrayList<Group> progEng, ArrayList<Group> cyberSec, ArrayList<Group> mathSec) {
         this.title = title;
         this.progEng = progEng;
         this.cyberSec = cyberSec;
@@ -29,27 +29,27 @@ public class Faculty {
         this.title = title;
     }
 
-    public List<Group> getProgEng() {
+    public ArrayList<Group> getProgEng() {
         return progEng;
     }
 
-    public void setProgEng(List<Group> progEng) {
+    public void setProgEng(ArrayList<Group> progEng) {
         this.progEng = progEng;
     }
 
-    public List<Group> getCyberSec() {
+    public ArrayList<Group> getCyberSec() {
         return cyberSec;
     }
 
-    public void setCyberSec(List<Group> cyberSec) {
+    public void setCyberSec(ArrayList<Group> cyberSec) {
         this.cyberSec = cyberSec;
     }
 
-    public List<Group> getMathSec() {
+    public ArrayList<Group> getMathSec() {
         return mathSec;
     }
 
-    public void setMathSec(List<Group> mathSec) {
+    public void setMathSec(ArrayList<Group> mathSec) {
         this.mathSec = mathSec;
     }
 
