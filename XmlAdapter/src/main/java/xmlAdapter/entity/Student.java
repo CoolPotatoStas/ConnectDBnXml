@@ -1,14 +1,22 @@
 package xmlAdapter.entity;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
+@XmlRootElement(name = "student")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
+    @XmlElement(name = "name")
     String name;
+    @XmlElement(name = "second-name")
     String secondName;
+    @XmlElement(name = "surname")
     String surname;
+    @XmlElement(name = "age")
     double age;
+    @XmlElementWrapper(name = "hobbies")
+    @XmlElement(name = "hobby")
     ArrayList<Hobby> hobbies;
 
     public Student(String name, String secondName, String surname, double age, ArrayList<Hobby> hobbies) {

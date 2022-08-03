@@ -2,18 +2,25 @@ package xmlAdapter.entity;
 
 import xmlAdapter.dictionary.*;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
+@XmlRootElement(name = "group")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Group {
-    String title;
+    @XmlElement(name = "name")
+    String name;
+    @XmlElement(name = "direction")
     Direction direction;
+    @XmlElement(name = "course")
     Course course;
+    @XmlElementWrapper(name = "students")
+    @XmlElement(name = "student")
     ArrayList<Student> students;
 
     public Group(String title, Direction direction, Course course, ArrayList<Student> students) {
-        this.title = title;
+        this.name = title;
         this.direction = direction;
         this.course = course;
         this.students = students;
@@ -23,7 +30,7 @@ public class Group {
     }
 
     public String getTitle() {
-        return title;
+        return name;
     }
 
     public Direction getDirection() {
@@ -39,7 +46,7 @@ public class Group {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.name = title;
     }
 
     public void setDirection(Direction direction) {
@@ -59,18 +66,18 @@ public class Group {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Group group = (Group) o;
-        return title.equals(group.title) && direction == group.direction && course == group.course && students.equals(group.students);
+        return name.equals(group.name) && direction == group.direction && course == group.course && students.equals(group.students);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, direction, course, students);
+        return Objects.hash(name, direction, course, students);
     }
 
     @Override
     public String toString() {
         return "Group{" +
-                "title='" + title + '\'' +
+                "title='" + name + '\'' +
                 ", direction=" + direction +
                 ", course=" + course +
                 ", students=" + students +

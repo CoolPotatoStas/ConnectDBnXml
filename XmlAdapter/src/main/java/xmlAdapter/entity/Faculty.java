@@ -1,15 +1,24 @@
 package xmlAdapter.entity;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
+@XmlRootElement(name = "faculty")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Faculty {
 
+    @XmlElement(name = "title")
     String title;
+    @XmlElementWrapper(name = "program-eng")
+    @XmlElement(name = "group")
     ArrayList<Group> progEng;
+    @XmlElementWrapper(name = "cyber-sec")
+    @XmlElement(name = "group")
     ArrayList<Group> cyberSec;
+    @XmlElementWrapper(name = "math-sec")
+    @XmlElement(name = "group")
     ArrayList<Group> mathSec;
-
 
     public Faculty(String title, ArrayList<Group> progEng, ArrayList<Group> cyberSec, ArrayList<Group> mathSec) {
         this.title = title;
