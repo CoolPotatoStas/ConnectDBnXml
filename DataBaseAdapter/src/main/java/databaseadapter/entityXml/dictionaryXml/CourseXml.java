@@ -1,6 +1,6 @@
 package databaseadapter.entityXml.dictionaryXml;
 
-public enum Course {
+public enum CourseXml {
 
     FIRST("Первый"),
     SECOND("Второй"),
@@ -10,7 +10,7 @@ public enum Course {
 
     private final String title;
 
-    Course(String title) {
+    CourseXml(String title) {
         this.title = title;
     }
 

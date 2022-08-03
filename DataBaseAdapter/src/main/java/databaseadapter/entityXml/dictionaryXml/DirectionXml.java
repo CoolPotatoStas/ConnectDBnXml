@@ -1,6 +1,6 @@
 package databaseadapter.entityXml.dictionaryXml;
 
-public enum Direction {
+public enum DirectionXml {
 
     ProgramEng("Программная инженерия", "Выпускает программистов"),
     CyberSec("Кибербезопасность", "Выпускает кибербезопасников"),
@@ -10,7 +10,7 @@ public enum Direction {
     private String description;
 
 
-    Direction(String title, String description) {
+    DirectionXml(String title, String description) {
         this.title = title;
         this.description = description;
     }

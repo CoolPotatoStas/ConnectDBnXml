@@ -12,14 +12,14 @@ public class GroupXml {
     @XmlElement(name = "name")
     String name;
     @XmlElement(name = "direction")
-    Direction direction;
+    DirectionXml direction;
     @XmlElement(name = "course")
-    Course course;
+    CourseXml course;
     @XmlElementWrapper(name = "students")
     @XmlElement(name = "student")
     ArrayList<StudentXml> students;
 
-    public GroupXml(String title, Direction direction, Course course, ArrayList<StudentXml> students) {
+    public GroupXml(String title, DirectionXml direction, CourseXml course, ArrayList<StudentXml> students) {
         this.name = title;
         this.direction = direction;
         this.course = course;
@@ -33,11 +33,11 @@ public class GroupXml {
         return name;
     }
 
-    public Direction getDirection() {
+    public DirectionXml getDirection() {
         return direction;
     }
 
-    public Course getCourse() {
+    public CourseXml getCourse() {
         return course;
     }
 
@@ -49,11 +49,11 @@ public class GroupXml {
         this.name = title;
     }
 
-    public void setDirection(Direction direction) {
+    public void setDirection(DirectionXml direction) {
         this.direction = direction;
     }
 
-    public void setCourse(Course course) {
+    public void setCourse(CourseXml course) {
         this.course = course;
     }
 

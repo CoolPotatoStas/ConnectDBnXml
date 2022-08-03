@@ -1,0 +1,7 @@
+package databaseadapter.repository;
+
+import databaseadapter.entity.Course;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CourseRepository extends JpaRepository<Course, Long> {
+}
